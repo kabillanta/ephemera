@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+/* Updated Grid Color to be slightly blue-tinted */
+.bg-grid {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+    linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+.glass {
+  background: rgba(15, 23, 42, 0.6); /* Darker slate tint */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* UPDATED: Cyan Glow Animation */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px #4FD1C5, 0 0 10px #4FD1C5; }
+  50% { box-shadow: 0 0 20px #4FD1C5, 0 0 30px #5B7FFF; }
+}
+.animate-glow {
+  animation: glow 3s infinite;
+}

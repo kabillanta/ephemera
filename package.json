@@ -1,0 +1,33 @@
+{
+  "name": "ephemera",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.35.8",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.561.0",
+    "nanoid": "^5.1.6",
+    "next": "16.0.10",
+    "pusher": "^5.2.0",
+    "pusher-js": "^8.4.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.10",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
